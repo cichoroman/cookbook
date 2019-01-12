@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cookbooks</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag  'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css '  %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+<div>
+
+
+    <nav class="navbar  navbar-default">
+  <a class="navbar-brand" href="#">Cookbook</a>
+
+
+  <div id="navbar"  class="navbar">
+    <ul class="nav navbar-nav ">
+      <li>
+        <%= link_to "Home", home_path %>
+        </li>
+
+    </ul>
+    <ul class="nav navbar-nav  ">
+      <li>
+        <%= link_to "Create Post", new_post_path %>
+        </li>
+
+    </ul>
+
+  </div>
+</nav>
+  </div>
+    <%= yield %>
+
+  </body>
+</html>
