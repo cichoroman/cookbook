@@ -1,10 +1,26 @@
+
+<div class="container ">
 <h1>
   Recipes
 </h1>
 
+  <div class="panel-group">
 <% @posts.each do |post| %>
+<div class="panel panel-info">
+
+
+
+  <div class="panel-heading">
+
 <h3><%= post.title %></h3>
+  </div>
+  <div class="panel-body">
 <p>
   <%= post.body %>
   </p>
+  <%= link_to "Full recipe", post_path(post), :class => 'btn btn-primary' %>
+  </div>
+
 <% end %>
+  </div>
+  </div>
