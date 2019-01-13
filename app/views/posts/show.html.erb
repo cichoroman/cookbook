@@ -1,29 +1,15 @@
 <div class='container'>
 
-<div class="card border-primary mb-3" >
-    <div class="card-header" style="background: #518abf">
-      <h2 >
-      </h2>
-    </div>
-    <div class="card-body">
 
-      <p class="card-text">
-      </p>
-
-    </div>
-    <div class="card-footer ">
-
-    </div>
-  </div>
 
 
   <div class="jumbotron">
     <h1 class="display-4">  <%= @post.title %></h1>
 
-    <hr class="my-4">
+    <hr class="my-4 overflow-auto">
     <p>  <%= simple_format( @post.body )%></p>
     <p class="lead">
-    
+
   <%= link_to "Edit the recipe", edit_post_path(@post), :class => 'btn btn-primary' %>
     </p>
   </div>

@@ -1,4 +1,4 @@
-class PostsController < ApplicationController   # "<"dziedziczy z root kontrolera
+class PostsController < ApplicationController  
   def index
     @posts = Post.all
   end
@@ -25,7 +25,7 @@ class PostsController < ApplicationController   # "<"dziedziczy z root kontroler
   end
 
   def create
-     #render plain: params[:post].inspect
+
     @post = Post.new(post_params)
 
 if(@post.save)

@@ -1,7 +1,7 @@
 
 <div class="container ">
 <h1>
-Latest recipes of the community 
+Latest recipes of the community
 </h1>
 
   <div class="panel-group">
@@ -15,11 +15,17 @@ Latest recipes of the community
 <h3><%= post.title %></h3>
   </div>
   <div class="panel-body">
-<p>
-  <%= post.body %>
+
+  <% input = post.body
+ shorter = input[0,200] %>
+ <p>
+   <%= shorter %>  ...
+   </p>
+   <p class="text-primary">
+  Chekout the recipe for delicious <%= post.title %> ! Click the button below.
 
   </p>
-  <%= link_to "Full recipe", post_path(post), :class => 'btn btn-primary' %>
+  <%= link_to "Show me recipe", post_path(post), :class => 'btn btn-primary' %>
   </div>
 
 <% end %>
