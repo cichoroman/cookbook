@@ -1,4 +1,8 @@
 class PostsController < ApplicationController
+
+  http_basic_authenticate_with name: "Ala", password:"123qwerty", only:[:destroy]
+
+
   def index
     @posts = Post.all
   end

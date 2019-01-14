@@ -8,20 +8,22 @@
 
     <hr class="my-4 overflow-auto">
     <p>  <%= simple_format( @post.body )%></p>
-    <p class="lead">
+    <div class="lead">
 
   <%= link_to "Edit the recipe", edit_post_path(@post), :class => 'btn btn-primary' %>
   <%= link_to "Delete the recipe", post_path(@post),
                                  method: :delete,
                                  data: {confirm: 'Do you really want to do it?'},
                                 :class => 'btn btn-danger' %>
-  <%= link_to "Delete the recipe", post_path(@post),
-                     method: :delete,
-                     data: {confirm: 'Do you really want to do it?'},
-                     :class => 'btn btn-danger' %>
-    </p>
+
+    </div>
   </div>
 
+
+
+<%= render 'comments/commentsPv' %>
+
+<%= render 'comments/commentsformPv' %>
 
 
 

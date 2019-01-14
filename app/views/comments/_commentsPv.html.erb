@@ -1,0 +1,16 @@
+
+<h3>Comments section</h3>
+<% @post.comments.each do |comment| %>
+    <div>
+
+  <strong><%= comment.username %></strong>: <%= comment.body %>
+
+
+<%= link_to "Delete the comment", [comment.post, comment],
+                                 method: :delete,
+                               data: {confirm: 'Deleting negative comments will not solve your problems.
+                                Are you sure you want to do this??'},
+                              :class => 'btn btn-danger' %>
+
+</div>
+  <% end %>
