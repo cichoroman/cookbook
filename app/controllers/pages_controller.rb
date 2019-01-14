@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def about
     @title = 'About us'
-    @content = 'This is the about page'
+    @content = 'Something about us'
   end
 
   def myrecipes
