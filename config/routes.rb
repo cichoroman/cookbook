@@ -4,6 +4,7 @@ root 'posts#index' , as: 'home'   #nazwa kontrolera/widoku
 get 'about' => 'pages#about' , as: 'about'
 get 'myrecipes' => 'pages#myrecipes' , as: 'myrecipes'
 
+#root 'posts#index' , as: 'home'
 
 resources :posts do
   resources :comments
