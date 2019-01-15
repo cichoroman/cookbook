@@ -1,5 +1,7 @@
 <div class='container'>
 
+<br/>
+
 
 
 
@@ -10,7 +12,7 @@
     <p>  <%= simple_format( @post.body )%></p>
     <div class="lead">
 
-  <%= link_to "Edit the recipe", edit_post_path(@post), :class => 'btn btn-primary' %>
+  <%= link_to "Edit the recipe", edit_post_path(@post), :class => 'btn btn-success' %>
   <%= link_to "Delete the recipe", post_path(@post),
                                  method: :delete,
                                  data: {confirm: 'Do you really want to do it?'},
